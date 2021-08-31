@@ -36,3 +36,10 @@ func main() {
 }
 ```
 
+```shell
+$ go run main.go
+```
+
+this will show screen below:
+
+![screenshot](./screenshot.png)
