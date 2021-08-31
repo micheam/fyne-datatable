@@ -11,7 +11,7 @@ import (
 func New(tmplObj interface{}, data interface{}) *widget.Table {
 	var v = reflect.ValueOf(data)
 	var headers = tagValues(tmplObj)
-	if v.Kind() != reflect.Array {
+	if v.Kind() != reflect.Array && v.Kind() != reflect.Slice {
 		panic(fmt.Sprintf("need %v but got %v", reflect.Array, v.Kind()))
 	}
 
